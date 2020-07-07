@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docume</title>
+  </head>
+  <body onload="draw();">
+    <canvas id="anpanman" width="200" height="200"></canvas>
+    <script>
+      function draw(){
+        var canvas = document.getElementById('anpanman');
+        canvas.style.border = "1px solid black"
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.arc(100,100,90,0,Math.PI*2,true); // 外円
+        ctx.moveTo(120,110);
+        ctx.arc(100,110,20,0,Math.PI*2,true);
+        ctx.moveTo(60,90);
+        ctx.arc(60,110,20,Math.PI*3/2,Math.PI/2,false);
+        ctx.moveTo(140,90);
+        ctx.arc(140,110,20,Math.PI*3/2,Math.PI/2,true);
+        ctx.moveTo(90,45);
+        ctx.ellipse(73,65,20,40,0,Math.PI*11/6,Math.PI*9/8,true);
+        ctx.moveTo(110,45);
+        ctx.ellipse(127,65,20,40,0,Math.PI*7/6,Math.PI*15/8);
+        ctx.moveTo(60,135);
+        ctx.ellipse(100,135,40,30,0,0,Math.PI);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(80,50);
+        ctx.ellipse(80,70,10,20,0,Math.PI*3/2,Math.PI*7/2);
+        ctx.moveTo(120,50);
+        ctx.ellipse(120,70,10,20,0,Math.PI*3/2,Math.PI*7/2);
+        ctx.fill();
+
+        ctx.strokeRect(95,105,10,10);
+        ctx.strokeRect(55,105,10,10);
+        ctx.strokeRect(135,105,10,10);
+      }
+    </script>
+  </body>
+</html>
