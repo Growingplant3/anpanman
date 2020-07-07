@@ -1,1 +1,2 @@
-# anpanman
+学び
+canvasを使ってアンパンマンを描く
